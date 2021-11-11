@@ -1,0 +1,21 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "javascript", "html, htmldjango, json", "python"],
+
+  // python config
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true,
+
+  // Formatting
+  // https://vi.stackexchange.com/questions/26699/how-to-format-files-on-save-using-black-with-neovim-and-coc
+  "python.formatting.provider": "black",
+  "python.formatting.blackArgs": ["-l 100"],
+  "python.formatting.blackPath": "~/.pyenv/versions/pynvim3/bin/black",
+  "coc.preferences.formatOnType": true,
+  "python.venvPath": "${env:HOME}/.pyenv/versions",
+
+  //"diagnostic.errorSign": "✖",
+  //  "diagnostic.warningSign": "!",
+  //  "diagnostic.hintSign": "▶",
+    "diagnostic.virtualText": true,
+    "diagnostic.locationlistUpdate": true
+}

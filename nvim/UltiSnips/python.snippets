@@ -1,0 +1,21 @@
+snippet ifma "Start module condition" b
+if __name__=="__main__":
+	main()
+endsnippet	
+
+snippet CO "Copyright" b
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# -------------------------------------------------------------------
+# Copyright (C) 2019-2021 by Maxim N. Deviatov. All Rights Reserved.
+# Author:       Maxim N. Deviatov < mdeviatov@gmail.com >
+# ---
+# `!p snip.rv=snip.fn`		${1:<< Назначение файла >>}
+# Path:			`!p 
+from pathlib import Path
+snip.rv=str(Path.cwd())
+`
+# Update:       `date +%d-%B-%Y\ %H:%M`
+# -------------------------------------------------------------------
+endsnippet
+	
