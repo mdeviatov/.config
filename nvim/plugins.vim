@@ -3,8 +3,11 @@ call plug#begin('~/.vim/plugged')
  Plug 'neoclide/coc.nvim', {'branch': 'release'}
  Plug 'mbbill/undotree'             " :UndotreeToggle ctrl-r/u
  Plug 'tpope/vim-commentary'        " commentary: toggle by 'gcc' or 5gcc and so one 
- Plug 'Yggdroot/indentLine'
+ Plug 'tpope/vim-fugitive'          " Git operations
  Plug 'psliwka/vim-smoothie'        " Ctrl-D/ Ctrl-U
+ Plug 'Yggdroot/indentLine'
+ Plug 'cohama/lexima.vim'           " Auto close parentheses
+
  " Plug 'dracula/vim'
  " Using Vim-Plug
  Plug 'navarasu/onedark.nvim'
