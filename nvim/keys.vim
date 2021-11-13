@@ -46,7 +46,6 @@ autocmd VimLeave *  if !v:dying | execute 'tabdo NERDTreeClose' | endif
  map bd :bdelete<cr>
 
  " JSON Format
-" nnoremap <leader>j :%!python -m json.tool<CR>
 nnoremap <leader>j :%!jq<CR>
 
 "   - Folding START -

@@ -26,13 +26,13 @@ set completeopt=longest,menuone
 set t_Co=256
 set notermguicolors
 filetype plugin indent on   "allow auto-indenting depending on file type
-syntax on                   " syntax highlighting
 set mouse=a                 " enable mouse click
 set clipboard=unnamedplus   " using system clipboard
 filetype plugin on
 set ttyfast                 " Speed up scrolling in Vim
 " set spell                 " enable spell check (may need to download language package)
 set noswapfile            " disable creating swap file
+syntax on                   " syntax highlighting
 " set backupdir=~/.cache/vim " Directory to store backup files.
 
 " Настройки провайдеров Python[2|3]
@@ -44,4 +44,17 @@ let g:mapleader = "\<Space>"
 " open new split panes to right and below
 set splitright
 set splitbelow
+
+augroup json
+    autocmd!
+    " autocmd FileType json setlocal foldmethod=syntax 
+    autocmd FileType json setlocal foldmethod=marker foldmarker={,}
+    autocmd Syntax json %!jq
+    " autocmd FileType json setlocal set syntax=on
+    " autocmd FileType json setlocal syntax on
+    " autocmd FileType bar,baz setlocal noexpandtab shiftwidth=3 spell spellang=en_us
+augroup END
+
+autocmd BufNewFile,BufRead *.json set syntax=on ft=json
+" autocmd Filetype json setlocal foldmethod=syntax
 
